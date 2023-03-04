@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #fdefeb;
+        }
+        .jpg{
+            margin-left: 35%;
+            margin-top: 8%;
+        }
+        form{
+            margin-left: 35%;
+            /* border: 1px solid red; */
+            width: 26.3%;
+            margin-top: -22px;
+            background-color: white;
+            height: 310px;
+        }
+        label{
+            /* margin-top: 10px; */
+            font-size: 18px;
+        }
+        .log{
+            display: flex;
+            margin-left: 30px;
+            margin-top: 20px;
+        }
+        .log>h1{
+            font-size: 20px;
+            margin-left: 7px;   
+        }
+        .log>h2{
+            font-size: 18px;
+            opacity: 0.8;
+            font-weight: 400;
+            margin-left: 5px;
+        }
+        input{
+            height: 30px;
+            margin-top: 16px;
+            width: 80%;
+            margin-left: 33px;
+            outline: none;
+        }
+        #imp{
+            width: 82%;
+            height: 32px;
+            background-color: #ff3f6c;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 14px;
+            margin-top: -8px;
+        }
+        .b1 >h4{
+            font-size: 13px;
+            margin-left: 9%;
+            opacity: 0.8;
+        }
+        .av > h4{
+            font-size: 13px;
+            margin-left: 9%;
+            margin-top: px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="jpg">
+        <img src="./download.jpg" alt="">
+    </div>
+    <form onsubmit="login(event)">
+        <div class="log">
+            <h1>Login</h1>
+            <h2>or</h2>
+            <h1>signup</h1>
+        </div>
+        <!-- <label for="">Email</label> <br> -->
+        <input id="email" type="email" placeholder="Enter your email"> <br>
+        <!-- <label for="">Password</label> <br> -->
+        <input id="password" type="password" placeholder="Enter your password"> <br>
+        <div class="b1">
+            <h4>By continuing, I agree to the <a style="color: #ff3f6c;" href="Terms of use">Terms of use</a> & <a style="color: #fc2759;" href="Privacy Policy">Privacy Policy</a></h4>
+        </div>
+        <input id="imp" type="submit" value="CONTINUE"> <br>
+        <div class="av">
+            <h4>Have trouble logging in? <a style="color: #ff3f6c;" href="Get help">Get help</a></h4>
+        </div>
+    </form>
+    <script src="./myntra.js" ></script>
+</body>
+</html>
