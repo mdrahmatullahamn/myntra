@@ -96,5 +96,14 @@
 
     </form>
     <script src="./myntra.js" ></script>
+    <script>
+        window.onload= function(){
+        var dataFromLS = JSON.parse(localStorage.getItem("product"));
+        if(!dataFromLS){
+        // window.location.href='/myntra2.html';
+        alert("alredy logged")}
+
+        }
+    </script>
 </body>
 </html>

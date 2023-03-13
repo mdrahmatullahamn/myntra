@@ -9,7 +9,7 @@ function register(event){
 //   console.log(userData, "userData")
 // starting data from js to ls 
 var dataFromLS =JSON.parse(localStorage.getItem("userData")) || [];
-console.log(dataFromLS, "dataFromLS")
+// console.log(dataFromLS, "dataFromLS")
 var flag = false;
 for (var i=0; i<dataFromLS.length; i++){
     if(dataFromLS[i].email===userEmail){
@@ -53,8 +53,11 @@ function login(event){
         }
     } if(flag === true){
    document.getElementById("email").value='';
-   document.getElementById("password").value=''; 
-   window.location.href = "myntra.html";
+   document.getElementById("password").value='';
+   var user = {};
+   user["current-user-email"] = userEmail;  
+   localStorage.setItem("product",JSON.stringify(user)) 
+   window.location.href = "myntra2.html";
    alert("login done....")
 
     }else{
@@ -117,10 +120,10 @@ function addToLS(){
     var proImage = document.getElementById("image").value;
     var proPrice = document.getElementById("price").value;
 
-    var product = { name:proName, image:proImage, price:proPrice }
-    var proDtaLS = JSON.parse(localStorage.getItem("product")) || [];
+    var myntra = { name:proName, image:proImage, price:proPrice }
+    var proDtaLS = JSON.parse(localStorage.getItem("myntra")) || [];
     // console.log(proDtaLS, "proDtaLS")
-    proDtaLS.push(product)
-    localStorage.setItem("product", JSON.stringify(proDtaLS));
+    proDtaLS.push(myntra)
+    localStorage.setItem("myntra", JSON.stringify(proDtaLS));
     alert("done")
 }

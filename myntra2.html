@@ -299,6 +299,16 @@
         .rockey>p {
             margin-left: 35%;
         }
+        .btn{
+            margin-left: 26%;
+            margin-top: -10px;
+            outline: none;
+            border: none;
+            background-color: crimson;
+            color: white;
+            width: ;
+            height: 25px;
+        }
     </style>
 </head>
 
@@ -331,7 +341,7 @@
                 </div>
                 <div class="inp4">
                     <i class="fa-solid fa-bag-shopping"></i>
-                    <h3>Bag</h3>
+                    <h3> <a href="./myntracart.html">Bag</a></h3>
                 </div>
             </div>
         </div>
@@ -444,8 +454,28 @@
     <div id="simple">
 
     </div>
+    <div id="logout">
+
+    </div>
+    
 
     <script src="./pro.js"></script>
+    <script>
+        function check(){
+            var dataFromLS=JSON.parse(localStorage.getItem("myntra"));
+            if (dataFromLS){
+                var divForLogout = document.getElementById("logout");
+                var logoutButton=`<button onclick="logout()">logout</button>`;
+                divForLogout.innerHTML = logoutButton;
+            }
+        }
+        check()
+        function logout(){
+            localStorage.removeItem("product");
+            window.location.reload();
+            alert("logout sucessfully done.....")
+        }
+     </script>
 </body>
 
 </html>
